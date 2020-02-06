@@ -1,0 +1,21 @@
+.input-group-lg>.form-control {
+	padding: 16px;
+	font-size: 18px;
+	border-radius: 0;
+
+	&:not(textarea) {
+		height: 64px;
+		padding-left: 64px;
+	}
+}
+
+.input_item {
+	position: relative;
+
+	.fal {
+		position: absolute;
+		left: 16px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}

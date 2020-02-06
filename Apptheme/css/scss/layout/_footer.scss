@@ -1,0 +1,64 @@
+.zone_footer {
+
+    a,
+    p {
+        color: #ffffff;
+    }
+
+    p {
+        font-family: "Muli", Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 12px;
+
+        @media (min-width: 375px) {
+            font-size: 14px;
+        }
+
+        @media (min-width: 425px) {
+            font-size: 16px;
+        }
+
+        .fal {
+            margin-right: 5px;
+        }
+    }
+
+    .footer_title {
+        font-family: "UTM Centur", "Times New Roman", Times, Baskerville, Georgia, serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+
+    .footer_logo {
+        margin-bottom: 24px;
+
+
+        img {
+            height: auto;
+        }
+    }
+
+    .nav {
+
+        display: flex;
+
+        &-item {
+            &:hover {
+                .nav-link {
+                    text-decoration: underline;
+                    background: none;
+                }
+            }
+
+            &+.nav-item {
+                border-top: 1px solid #545454;
+            }
+        }
+
+        &-link {
+            font-family: "Muli", Arial, "Helvetica Neue", Helvetica, sans-serif;
+            padding: 16px 0;
+        }
+    }
+}

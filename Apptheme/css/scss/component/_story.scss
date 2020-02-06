@@ -1,0 +1,394 @@
+.story {
+    margin-bottom: 16px;
+
+    &_img {
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+        .story_img {
+            transform: scale(1.05);
+        }
+    }
+
+    &_header {
+        margin-bottom: 16px;
+    }
+
+    &_title {
+        font-family: "UTM Centur", "Times New Roman", Times, Baskerville, Georgia, serif;
+
+        &_normal {
+            @include normal_title;
+        }
+
+        &_medium {
+            @include medium_title;
+        }
+
+        &_large {
+            @include large_title;
+        }
+
+        .boldtext {
+            font-size: 48px;
+            font-weight: bold;
+
+            @media (min-width: 1200px) {
+                font-size: 64px;
+            }
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    &_summary {
+        font-family: "Muli", Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 16px;
+
+        @media (min-width: 1200px) {
+            font-size: 18px;
+        }
+    }
+
+    &_right {
+        .story_img {
+            float: right;
+            margin-left: 16px;
+        }
+    }
+
+    &_cover {
+        .story_img {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                bottom: 0;
+                background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+                background: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+                background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+            }
+        }
+
+        @media (min-width: 768px) {
+            position: relative;
+
+            .story_title a {
+                color: #fff;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .cover {
+        max-width: 558px;
+
+        &_bg {
+            .story_header {
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 768px) {
+            position: absolute;
+            bottom: 48px;
+            left: 48px;
+
+            &_bg {
+                background: rgba(0, 0, 0, 0.5);
+                padding: 32px;
+                text-align: center;
+            }
+
+            .story_summary {
+                color: #ffffff;
+            }
+
+            &_white {
+                position: inherit;
+                left: 0;
+                bottom: 0;
+                text-align: center;
+                max-width: 100%;
+                width: 100%;
+
+                .story_summary {
+                    color: #000000;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            &_white {
+                padding: 32px;
+                position: absolute;
+                left: 50%;
+                bottom: -10%;
+                transform: translateX(-50%);
+                background: #ffffff;
+                width: 80%;
+
+                .story_summary {
+                    color: #000000;
+                }
+            }
+        }
+
+    }
+
+    &_mask {
+        position: relative;
+        margin-bottom: 0;
+
+        .story_img {
+            position: relative;
+            margin-bottom: 0;
+
+            &::after {
+                content: '';
+                display: block;
+                background-color: transparent;
+                position: absolute;
+                top: 24px;
+                bottom: 24px;
+                right: 24px;
+                left: 24px;
+                opacity: 0;
+                transition: all 0.2s ease-in-out;
+            }
+
+            a::after {
+                content: '';
+                display: block;
+                background-color: rgba(0, 0, 0, 0.4);
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                right: 0px;
+                left: 0px;
+                opacity: 0;
+                transition: all 0.2s ease-in-out;
+
+            }
+        }
+
+        .story_header {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+            text-transform: uppercase;
+            text-align: center;
+
+            a {
+                color: #ffffff;
+            }
+        }
+
+        &:hover {
+
+            .story_img::after,
+            .story_img a::after,
+            .story_header {
+                opacity: 1;
+            }
+        }
+
+        .story_title a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &_left {
+        @media (min-width: 768px) {
+            .story_img {
+                float: left;
+                margin-right: 32px;
+            }
+
+            &.story_about {
+                .story_img {
+                    width: 50%;
+                }
+            }
+        }
+
+    }
+}
+
+.news_detail {
+    &_header {
+        .news_title {
+            font-family: "UTM Centur", "Times New Roman", Times, Baskerville, Georgia, serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 16px;
+
+            @media (min-width: 768px) {
+                text-align: center;
+            }
+        }
+
+        .news_summary {
+            font-family: "Muli", Arial, "Helvetica Neue", Helvetica, sans-serif;
+            margin-bottom: 24px;
+        }
+
+
+
+        @media (min-width: 992px) {
+            position: relative;
+            // margin-bottom: 100px;
+
+            .cover {
+                position: relative;
+                padding: 24px 24px 0 24px;
+                background: #ffffff;
+                left: 50%;
+                top: -50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+            }
+
+            .news_summary {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &_content {
+        font-family: "Muli", Arial, "Helvetica Neue", Helvetica, sans-serif;
+        margin-bottom: 64px;
+
+        @media (min-width: 992px) {
+            margin-top: -38px;
+
+            p,
+            h3 {
+                max-width: 80%;
+
+                margin: {
+                    left: auto;
+                    right: auto;
+                }
+            }
+        }
+
+        .quote {
+            p {
+                padding: 8px 0 8px 24px;
+                border-left: 1px solid #F6963F;
+            }
+        }
+
+        .credit {
+            font-family: "UTM Centur", "Times New Roman", Times, Baskerville, Georgia, serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+
+    &_footer {
+
+        @media (min-width: 992px) {
+            max-width: 80%;
+
+            margin: {
+                left: auto;
+                right: auto;
+            }
+        }
+
+        .story {
+            padding: 24px;
+            margin-bottom: 0;
+            position: relative;
+
+            border: {
+                left: 1px solid #DBDBDB;
+                right: 1px solid #DBDBDB;
+                bottom: 1px solid #DBDBDB;
+            }
+
+            &_header {
+                margin-bottom: 0;
+
+                .story_title {
+                    margin-bottom: 0;
+                }
+            }
+
+            &_footer {
+                position: absolute;
+                top: 25%;
+                transform: translateY(-25%);
+                font-size: 32px;
+                color: rgba(0, 0, 0, 0.5);
+                // display: none;
+
+                &:hover {
+                    color: #000000;
+                    cursor: pointer;
+                }
+
+                @media (min-width: 768px) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &_right {
+                border-top: 1px solid #DBDBDB;
+
+                @media (max-width: 767px) {
+                    text-align: right;
+                }
+
+                .story_img {
+                    float: none;
+                    margin-left: 0;
+
+
+                    @media (min-width: 768px) {
+                        float: right;
+                        margin-left: 16px;
+                    }
+                }
+
+                .story_header {
+                    @media (min-width: 768px) {
+                        float: right;
+                    }
+                }
+
+                .story_footer {
+                    left: 48px;
+                }
+            }
+
+            &_left {
+                .story_footer {
+                    right: 48px;
+                }
+            }
+
+            &_img {
+                @media (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

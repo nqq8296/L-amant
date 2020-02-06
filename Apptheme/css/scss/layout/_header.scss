@@ -1,0 +1,151 @@
+.page_header {
+    padding: 24px 0;
+    z-index: 30;
+    background: #ffffff;
+    transition: all 0.2s ease-in-out;
+
+    @media (min-width: 768px) {
+        padding: 40px 0;
+    }
+
+    .nav {
+        @media (max-width: 767px) {
+            position: fixed;
+            z-index: 5;
+            background: #ffffff;
+        }
+    }
+}
+
+.is-pinned {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+
+    .logo img {
+        height: 30px;
+    }
+}
+
+.header_logo {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: 768px) {
+        justify-content: center;
+    }
+}
+
+.logo {
+    font-size: 32px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 24px;
+    }
+
+    img {
+        height: 32px;
+        transition: all 0.2s ease-in-out;
+
+        @media (min-width: 768px) {
+            height: 40px;
+        }
+    }
+}
+
+.btn-expand {
+    font-size: 32px;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    .fa-times {
+        display: none;
+    }
+}
+
+.nav {
+    display: none;
+    flex-direction: column;
+    position: relative;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-sub {
+        padding-left: 0;
+        position: absolute;
+        top: 100%;
+        display: none;
+        background: #000000;
+        z-index: 5;
+
+        .nav-item {
+            list-style-type: none;
+        }
+
+        .nav-link {
+            color: #ffffff;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-item {
+        font-family: "UTM Centur", "Times New Roman", Times, Baskerville, Georgia, serif;
+
+        &:hover {
+
+            .nav-link {
+                background: #000000;
+                color: #ffffff;
+            }
+
+            @media (min-width: 992px) {
+                .nav-sub {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-link {
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 8px 16px;
+
+        @media (min-width: 768px) {
+            padding: 8px 12px;
+        }
+
+        @media (min-width: 992px) {
+            padding: 8px 16px;
+            letter-spacing: 2px;
+        }
+    }
+
+    &-mega {
+        position: static;
+
+        .nav-sub {
+            right: 0;
+            padding: 24px 0;
+
+            .story_title a {
+                color: #ffffff;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

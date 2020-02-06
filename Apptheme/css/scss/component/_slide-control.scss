@@ -1,0 +1,110 @@
+.zone_slide_service {
+    .selector {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 32px;
+        cursor: pointer;
+
+
+        &:hover {
+            color: blue;
+        }
+
+        &.slide-prev {
+            left: 0;
+        }
+
+        &.slide-next {
+            right: 0;
+        }
+
+        .bx-next,
+        .bx-prev {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+        }
+    }
+}
+
+.zone_slide_arrival {
+    .selector {
+        position: relative;
+        cursor: pointer;
+        font-size: 32px;
+
+        &:hover {
+            color: blue;
+        }
+
+        .bx-next,
+        .bx-prev {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    .slide-control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bx-pager {
+            display: flex;
+        }
+
+        .bx-pager-link {
+            text-indent: -9999px;
+            display: block;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #fff;
+            border: 1px solid #000;
+            margin: 0 0.5rem;
+
+            &.active {
+                background: #000000;
+            }
+        }
+    }
+}
+
+.zone_cmt {
+    .slide-control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+
+        .bx-pager {
+            display: flex;
+        }
+
+        .bx-pager-link {
+            text-indent: -9999px;
+            display: block;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #fff;
+            border: 1px solid #000;
+            margin: 0 0.5rem;
+
+            &.active {
+                background: #000000;
+            }
+        }
+    }
+}

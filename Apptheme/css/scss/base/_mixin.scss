@@ -1,0 +1,35 @@
+@mixin normal_title {
+    font-size: 16px;
+
+    @media (min-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 24px;
+    }
+}
+
+@mixin medium_title {
+    font-size: 20px;
+
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 28px;
+    }
+}
+
+@mixin large_title {
+    font-size: 24px;
+
+    @media (min-width: 768px) {
+        font-size: 28px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 32px;
+    }
+}
