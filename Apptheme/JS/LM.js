@@ -18,7 +18,6 @@ $(document).ready(function() {
     var serviceSlider = $('#slide_service')
     if (serviceSlider.length > 0 && isDesktop) {
         serviceSlider.bxSlider({
-            // auto: 1,
             minSlides: 4,
             maxSlides: 5,
             slideMargin: 16,
@@ -32,7 +31,6 @@ $(document).ready(function() {
         });
     } else if (serviceSlider.length > 0 && isMobile) {
         serviceSlider.bxSlider({
-            // auto: 1,
             minSlides: 1,
             maxSlides: 2,
             slideMargin: 16,
@@ -45,7 +43,6 @@ $(document).ready(function() {
         });
     } else if (serviceSlider.length > 0 && isTablet) {
         serviceSlider.bxSlider({
-            // auto: 1,
             minSlides: 3,
             maxSlides: 4,
             pager: 0,
@@ -61,7 +58,6 @@ $(document).ready(function() {
     var arrivalSlider = $('#slide_arrival')
     if (arrivalSlider.length > 0) {
         arrivalSlider.bxSlider({
-            // auto: 1,
             minSlides: 1,
             maxSlides: 1,
             pause: 6000,
